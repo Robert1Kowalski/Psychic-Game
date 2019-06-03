@@ -22,8 +22,22 @@
 
         document.onkeyup = function(event) {
             var yourGuess = event.key; // create new variable to capture user input
-            console.log("a")  //console log to check for errors 
-        }
+            pastGuesses.push(yourGuess);
+
+            var psychic = letters[Math.floor(Math.random() * letters.length)];
+
+            if (yourGuess === psychic) {
+                wins++;
+                numGuessesLeft = 9;
+            }
+            else {
+                losses--;
+                numGuessesLeft--;
+            }
+            }
+        
+
+
     
     
     
