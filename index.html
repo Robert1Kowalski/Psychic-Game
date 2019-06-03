@@ -15,10 +15,15 @@
     <script type="text/javascript">
     
     var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-            var wins 
-            var losses 
-            var numGuessesLeft
-            var pastGuesses
+            var wins = 0;
+            var losses =0; 
+            var numGuessesLeft = 9;
+            var pastGuesses = [];
+
+        document.onkeyup = function(event) {
+            var yourGuess = event.key; // create new variable to capture user input
+            console.log("a")  //console log to check for errors 
+        }
     
     
     
