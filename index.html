@@ -3,55 +3,19 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
-    <body>
-       <div id = "game">
+    <body id = "game">
+
+
+        <div>
            <h1>The Psychic Game:</h1>
-           <p>Wins:</p>
-           <p>Losses:</p>
-           <p>Guesses Left:</p>
-           <p>Your Guesses so Far:</p>
+           <p id = "wins">Wins:</p>
+           <p id = "losses"></p>Losses:</p>
+           <p id = "guessesLeft">Guesses Left:</p>
+           <p id = "guessSoFar">Your Guesses so Far:</p>
        </div>
+       <div id = "randomLetter"></div>
 
-    <script type="text/javascript">
-    
-    var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-            var wins = 0;
-            var losses =0; 
-            var numGuessesLeft = 9;
-            var pastGuesses = [];
-
-        document.onkeyup = function(event) {
-            var yourGuess = event.key; // create new variable to capture user input
-            pastGuesses.push(yourGuess);
-
-            var psychic = letters[Math.floor(Math.random() * letters.length)];
-
-            if (yourGuess === psychic) {
-                wins++;
-                numGuessesLeft = 9;
-            }
-            else {
-                losses--;
-                numGuessesLeft--;
-            }
-            }
-        
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    </script>
+<script> src = "assets/javascript.js" </script>
         
     </body>
 </html>
