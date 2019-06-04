@@ -2,33 +2,37 @@ var letters = [ "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",
 
 var win = 0;
 var losses = 0;
-var GuessLeft = 9; // win and losses at 0 b/c beginning of game
+var GuessLeft = 9; // win and losses at 0 b/c it is the beginning of game
 
-document.onkeyup = function () {
+document.onkeyup = function () { // one giant function
                                 // (1) IF the user input === the psychic guess, win total ++
                                 // (2)  if guessesLeft hits zero, add one to the loss column;
-                                // (3) if the guess is less than 0 characters (no input) do nothing;
-                                // (4)  anything else subtracts one from guessesleft 
+                                // (3)  anything else subtracts one from guessesleft 
 
 
 
 // need to build varaibles to hold the psychic value and user input value (event property?)
 var psychicGuess = letters[Math.floor(Math.random() * letters.length)];
 var userGuess =event.key;
-var myGuess = userGuess;
+var myGuess = userGuess; //why is it shadowing out my var names?
 
 //now build if/else loop
 
-if (){
+//step 1 above 
+if (userGuess = letters[Math.floor(Math.random() * letters.length )]){
 
+if (userGuess === letters){
+    wins++;
 }
-
-else if (){
-
-
 }
-
-else(){
+//step 2
+else if (GuessLeft == 0){
+    losses++;
+    GuessesLeft = 9;
+}
+//step 3
+else {
+    GuessesLeft --;
 
 
 }
@@ -36,10 +40,12 @@ else(){
 
 
 ///Still Need To Do:
-// build function for resetGuessses.  To reset the game I need to build a function that resets the page when defaultGuessesLeft = 0 
-//funciton resetGuesses (){
-// 
-//}
+// Figure out how to build reset into my four loop. ex: if (userGuess = letters){
+    // wins++ ()"}"
+    // else if (){
+    // guessesLeft = 0
+    // resestHTML (or something like that)
+    
 // figure out why the FUCK! my javascript wont link to my html
 //cry
 // 
