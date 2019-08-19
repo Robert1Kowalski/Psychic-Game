@@ -1,1 +1,3 @@
-# Psychic-Game
+The app randomly picks a letter, and the user has to guess which letter the app chose, using the keyboard to input different guesses.  If you guess correctly, the app adds +1 to your win count.  If you are unable to guess sucessfully before your number of guesses runs out, you lose, and the app adds +1 to your lose count.
+
+This app runs in the browser and features dynamically updated HTML powered by JavaScript code.
